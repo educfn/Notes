@@ -27,7 +27,7 @@ public partial class NotePage : ContentPage
 		if (BindingContext is Models.Note note)
 			File.WriteAllText(_fileName, TextEditor.Text);
 
-		await Shell.Current.GoToSync("..");
+		await Shell.Current.GoToAsync("..");
 	}
 
 	private async void DeleteButton_Clicked(object sender, EventArgs e)
@@ -39,7 +39,7 @@ public partial class NotePage : ContentPage
 				File.Delete(_fileName);
 		}
 
-		await Shell.Current.GoToSync("..");
+		await Shell.Current.GoToAsync("..");
 	}
 
 	private void LoadNote(string fileName)
