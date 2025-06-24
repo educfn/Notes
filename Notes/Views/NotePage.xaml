@@ -14,11 +14,11 @@
                 HeightRequest="100" />
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button Text="Save"
-                    Clicked="{Binding SaveCommand}"/>
+                    Command="{Binding SaveCommand}"/>
                     
             <Button Grid.Column="1"
                     Text="Delete"
-                    Clicked="{Binding DeleteCommand}"/>
+                    Command="{Binding DeleteCommand}"/>
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
