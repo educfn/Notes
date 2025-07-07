@@ -52,7 +52,7 @@ internal class NoteViewModel : ObservableObject, IQueryAttributable
     private async Task Delete()
     {
         _note.Delete();
-        await Shell.Current.GoToAsync($"..?saved={_note.Filename}");
+        await Shell.Current.GoToAsync($"..?deleted={_note.Filename}");
     }
 
     void IQueryAttributable.ApplyQueryAttributes(IDictionary<string, object> query)
